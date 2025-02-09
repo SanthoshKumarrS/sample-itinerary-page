@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Attractions in Kochi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f0f4f8;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('images/attractions.jpg');
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .attraction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .attraction-content {
+            padding: 25px;
+        }
+
+        .attraction-content h2 {
+            color: #2d3436;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .attraction-content p {
+            color: #546e7a;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .attraction-info {
+            display: flex;
+            justify-content: space-between;
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff7675;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 20px 0;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #e64a4a;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Tourist Attractions in Kochi</h1>
+        <p>Explore the Best of Kochi</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <div class="attraction-grid">
+            <div class="attraction-card">
+                <div class="attraction-image" style="background-image: url('images/mattancherry-palace.jpg')"></div>
+                <div class="attraction-content">
+                    <h2>Mattancherry Palace</h2>
+                    <p>Also known as the Dutch Palace, this 16th-century palace features Kerala murals depicting scenes from the Ramayana and Puranic legends. The palace is known for its traditional Kerala architecture blended with European influences.</p>
+                    <div class="attraction-info">
+                        <span><i class="far fa-clock"></i> Open: 9 AM - 5 PM</span>
+                        <span><i class="fas fa-ticket-alt"></i> Entry: ₹50</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <div class="attraction-image" style="background-image: url('images/lulu-mall.webp')"></div>
+                <div class="attraction-content">
+                    <h2>LuLu Shopping Mall</h2>
+                    <p>It is one of the largest shopping malls in India.Popular destination for shopping, entertainment, and dining</p>
+                    <div class="attraction-info">
+                        <span><i class="far fa-clock"></i> Best Time: Sunset</span>
+                        <span><i class="fas fa-shopping-bag"></i> Shopping Available</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <div class="attraction-image" style="background-image: url('images/marine-drive.webp')"></div>
+                <div class="attraction-content">
+                    <h2>Marine Drive</h2>
+                    <p>A picturesque promenade, Marine Drive is one of the most popular hangout spots in Kochi. The walkway offers stunning views of the backwaters and the Kochi harbor, with numerous shopping centers and restaurants.</p>
+                    <div class="attraction-info">
+                        <span><i class="far fa-clock"></i> Best Time: Evening</span>
+                        <span><i class="fas fa-camera"></i> Photography Paradise</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
