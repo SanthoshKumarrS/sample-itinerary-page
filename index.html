@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Kochi Landmarks Directory</title>
+ <!-- Font Awesome CDN -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ body {
+ background: #f0f4f8;
+ color: #333;
+ }
+
+ .header {
+ background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+ url('images/kochi2.jpg');
+ color: white;
+ text-align: center;
+ padding: 120px 20px;
+ background-size: cover;
+ background-position: center;
+ position: relative;
+ }
+
+ .header:before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.2);
+ }
+
+ .header h1 {
+ font-size: 3em;
+ margin-bottom: 20px;
+ position: relative;
+ z-index: 1;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+ }
+
+ .header p {
+ font-size: 1.2em;
+ position: relative;
+ z-index: 1;
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+ }
+
+ /* Search Bar Styles */
+ .search-bar {
+ position: relative;
+ max-width: 500px;
+ margin: 20px auto;
+ }
+
+ .search-input {
+ width: 100%;
+ padding: 12px 20px;
+ font-size: 1em;
+ border: none;
+ border-radius: 30px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ outline: none;
+ }
+
+ .search-button {
+ position: absolute;
+ top: 50%;
+ right: 15px;
+ transform: translateY(-50%);
+ background: none;
+ border: none;
+ color: #777;
+ cursor: pointer;
+ font-size: 1.2em;
+ }
+
+ .landmarks-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+ gap: 40px;
+ padding: 50px;
+ max-width: 1200px;
+ margin: 0 auto;
+ }
+
+ .landmark-card {
+ background: #fff;
+ border-radius: 12px;
+ overflow: hidden;
+ box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .landmark-card:hover {
+ transform: translateY(-8px);
+ box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+ }
+
+ .landmark-background {
+ height: 250px;
+ background-size: cover;
+ background-position: center;
+ position: relative;
+ color: white;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ font-size: 1.5em;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+ }
+
+ .landmark-background:before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.4);
+ }
+
+ .landmark-background h2 {
+ position: relative;
+ z-index: 1;
+ }
+
+ .poornathrayeesa-temple {
+ background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+ url('images/cherai-beach.jpg');
+ }
+
+ .anchumana-temple {
+ background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+ url('images/attractions.jpg');
+ }
+
+ .ettumanoor-temple {
+ background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+ url('images/ettumanoor-temple.jpg');
+ }
+
+ .old-church {
+ background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+ url('images/church.jpg');
+ }
+
+ .landmark-info {
+ padding: 25px;
+ }
+
+ .landmark-info h2 {
+ color: #2d3436;
+ margin-bottom: 12px;
+ font-size: 1.6em;
+ }
+
+ .landmark-info p {
+ color: #546e7a;
+ line-height: 1.7;
+ font-size: 1.1em;
+ }
+
+ .read-more {
+ display: inline-block;
+ margin-top: 20px;
+ padding: 10px 25px;
+ background: #ff7675;
+ color: white;
+ text-decoration: none;
+ border-radius: 6px;
+ transition: background 0.3s ease, transform 0.3s ease;
+ }
+
+ .read-more:hover {
+ background: #e64a4a;
+ transform: scale(1.05);
+ }
+
+ /* Footer Styles */
+ .footer {
+ background: #2d3436;
+ color: #fff;
+ padding: 70px 20px;
+ margin-top: 60px;
+ }
+
+ .footer-content {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 40px;
+ }
+
+ .contact-info, .social-links {
+ text-align: center;
+ }
+
+ .contact-info h3, .social-links h3 {
+ color: #ff7675;
+ margin-bottom: 25px;
+ font-size: 1.4em;
+ }
+
+ .contact-info p {
+ margin-bottom: 20px;
+ color: #cfd8dc;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 12px;
+ font-size: 1.1em;
+ }
+
+ .social-icons {
+ display: flex;
+ justify-content: center;
+ gap: 25px;
+ margin-top: 25px;
+ }
+
+ .social-icon {
+ color: white;
+ text-decoration: none;
+ padding: 14px;
+ border-radius: 50%;
+ background: #ff7675;
+ width: 50px;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: all 0.3s ease;
+ }
+
+ .social-icon:hover {
+ background: #e64a4a;
+ transform: translateY(-4px);
+ box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+ }
+
+ .social-icon i {
+ font-size: 1.3em;
+ }
+
+ /* Media Queries for Responsiveness */
+ @media (max-width: 768px) {
+ .landmarks-grid {
+ padding: 30px;
+ grid-template-columns: 1fr;
+ }
+
+ .header h1 {
+ font-size: 2.5em;
+ }
+
+ .landmark-info h2 {
+ font-size: 1.4em;
+ }
+
+ .footer-content {
+ grid-template-columns: 1fr;
+ text-align: center;
+ }
+ }
+
+ /* Styles for Hidden Cards */
+ .hidden {
+ display: none !important;
+ }
+ </style>
+</head>
+<body>
+ <header class="header">
+ <h1>Kochi Itinerary</h1>
+ <p>Discover Iconic Landmarks of Kochi</p>
+ <div class="search-bar">
+ <input type="text" class="search-input" placeholder="Search Landmarks..." onkeyup="searchLandmarks()">
+ <button class="search-button" aria-label="Search">
+ <i class="fa fa-search"></i>
+ </button>
+ </div>
+ </header>
+
+ <div class="landmarks-grid">
+ <div class="landmark-card" data-name="Beaches of Kochi">
+ <div class="landmark-background poornathrayeesa-temple">
+ <h2></h2>
+ </div>
+ <div class="landmark-info">
+ <h2>Beaches of Kochi</h2>
+ <p>Here’s a curated guide to the top beaches in Kochi, Kerala, highlighting their unique features, activities, and locations, based on the latest travel insights:</p>
+ <a href="beaches.html" class="read-more">Learn More</a>
+ </div>
+ </div>
+
+ <div class="landmark-card" data-name="Comforting Attractions">
+ <div class="landmark-background anchumana-temple">
+ <h2></h2>
+ </div>
+ <div class="landmark-info">
+ <h2>Comforting Attractions</h2>
+ <p>Kochi’s top tourist attractions, blending history, culture, nature, and modern charm:</p>
+ <a href="attractions.html" class="read-more">Learn More</a>
+ </div>
+ </div>
+
+ <div class="landmark-card" data-name="Divine Temples of Kochi">
+ <div class="landmark-background ettumanoor-temple">
+ <h2></h2>
+ </div>
+ <div class="landmark-info">
+ <h2>Divine Temples of Kochi</h2>
+ <p>A curated guide to ancient temples in Kochi, highlighting their historical significance, architectural marvels, & cultural heritage:</p>
+ <a href="temples.html" class="read-more">Learn More</a>
+ </div>
+ </div>
+
+ <div class="landmark-card" data-name="Serene Churches">
+ <div class="landmark-background old-church">
+ <h2></h2>
+ </div>
+ <div class="landmark-info">
+ <h2>Serene Churches</h2>
+ <p>The most notable churches in Kochi, highlighting their historical, architectural, and cultural significance</p>
+ <a href="churches.html" class="read-more">Learn More</a>
+ </div>
+ </div>
+ </div>
+
+ <footer class="footer">
+ <div class="footer-content">
+ <div class="contact-info">
+ <h3>Contact Us</h3>
+ <p><i class="fa-solid fa-envelope"></i> abc@gmail.com</p>
+ <p><i class="fa-solid fa-phone"></i> +91 4xx 2xxxxx</p>
+ <p><i class="fa-solid fa-location-dot"></i> landmark Street, City,<br>State, Malaysia - 682001</p>
+ </div>
+ <div class="social-links">
+ <h3>Follow Us</h3>
+ <div class="social-icons">
+ <a href="#" class="social-icon" title="Facebook">
+ <i class="fa-brands fa-facebook-f"></i>
+ </a>
+ <a href="#" class="social-icon" title="Instagram">
+ <i class="fa-brands fa-instagram"></i>
+ </a>
+ <a href="#" class="social-icon" title="Twitter">
+ <i class="fa-brands fa-twitter"></i>
+ </a>
+ <a href="#" class="social-icon" title="YouTube">
+ <i class="fa-brands fa-youtube"></i>
+ </a>
+ </div>
+ </div>
+ </div>
+ </footer>
+
+ <script>
+ function searchLandmarks() {
+ const searchInput = document.querySelector('.search-input').value.toLowerCase();
+ const landmarkCards = document.querySelectorAll('.landmark-card');
+
+ landmarkCards.forEach(card => {
+ const cardName = card.dataset.name.toLowerCase();
+ if (cardName.includes(searchInput)) {
+ card.classList.remove('hidden');
+ } else {
+ card.classList.add('hidden');
+ }
+ });
+ }
+ </script>
+</body>
+</html>
