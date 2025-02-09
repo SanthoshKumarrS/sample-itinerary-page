@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Temples of Kochi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f0f4f8;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('images/temple-header.jpg');
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .temple-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .temple-image {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .temple-content {
+            padding: 30px;
+        }
+
+        .temple-content h2 {
+            color: #2d3436;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .temple-content p {
+            color: #546e7a;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .temple-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff7675;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 20px 0;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #e64a4a;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Divine Temples of Kochi</h1>
+        <p>Explore Sacred Architecture and Spirituality</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <div class="temple-card">
+            <div class="temple-image" style="background-image: url('images/ernakulam-temple.webp')"></div>
+            <div class="temple-content">
+                <h2>Ernakulam Shiva Temple</h2>
+                <p>One of the major temples in Kochi, the Ernakulam Shiva Temple is dedicated to Lord Shiva. The temple is known for its traditional Kerala architecture and beautiful murals. The annual festival here is a grand celebration that attracts devotees from all over.</p>
+                <div class="temple-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Timings: 4:30 AM - 12:00 PM, 4:30 PM - 8:30 PM</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Best Time: During Shivaratri</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="temple-card">
+            <div class="temple-image" style="background-image: url('images/chottanikkara-temple.webp')"></div>
+            <div class="temple-content">
+                <h2>Chottanikkara Bhagavathy Temple</h2>
+                <p>This ancient temple is dedicated to Goddess Bhagavathy. Known for its powerful spiritual energy, the temple attracts devotees seeking blessings and healing. The architecture showcases classic Kerala temple style with intricate wooden carvings.</p>
+                <div class="temple-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Timings: 4:00 AM - 12:00 PM, 4:00 PM - 8:30 PM</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Best Time: During Navaratri</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="temple-card">
+            <div class="temple-image" style="background-image: url('images/thirumala-temple.webp')"></div>
+            <div class="temple-content">
+                <h2>Thirumala Devaswom Temple</h2>
+                <p>Dedicated to Lord Venkateswara, this temple is built in the traditional South Indian style. The temple is known for its peaceful atmosphere and regular cultural programs. The annual festival features traditional temple arts and music.</p>
+                <div class="temple-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Timings: 5:00 AM - 12:00 PM, 5:00 PM - 8:00 PM</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Best Time: During Brahmotsavam</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
