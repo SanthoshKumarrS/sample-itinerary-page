@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serene Churches of Kochi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f0f4f8;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('images/church-header.jpg');
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .church-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .church-image {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .church-content {
+            padding: 30px;
+        }
+
+        .church-content h2 {
+            color: #2d3436;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .church-content p {
+            color: #546e7a;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .church-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .historical-note {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff7675;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 20px 0;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #e64a4a;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Serene Churches of Kochi</h1>
+        <p>Discover Historical Christian Architecture</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <div class="church-card">
+            <div class="church-image" style="background-image: url('images/santa-cruz-basilica.webp')"></div>
+            <div class="church-content">
+                <h2>Santa Cruz Basilica</h2>
+                <p>One of the oldest churches built by European colonists in India, Santa Cruz Basilica is a historic church that showcases Indo-European and Gothic architecture. Its interior features beautiful frescos, paintings, and ornate decorations.</p>
+                <div class="church-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Timings: 7:00 AM - 6:30 PM</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-camera"></i>
+                        <span>Photography Allowed</span>
+                    </div>
+                </div>
+                <div class="historical-note">
+                    <i class="fas fa-history"></i> Built in 1505, rebuilt in 1905
+                </div>
+            </div>
+        </div>
+
+        <div class="church-card">
+            <div class="church-image" style="background-image: url('images/st-francis-church.webp')"></div>
+            <div class="church-content">
+                <h2>St. Francis Church</h2>
+                <p>The oldest European church in India, St. Francis Church is known for its historical significance. Vasco da Gama was originally buried here in 1524. The church features simple architecture with a gabled timber-framed roof.</p>
+                <div class="church-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Timings: 8:30 AM - 5:00 PM</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-landmark"></i>
+                        <span>Protected Monument</span>
+                    </div>
+                </div>
+                <div class="historical-note">
+                    <i class="fas fa-history"></i> Originally built in 1503
+                </div>
+            </div>
+        </div>
+
+        <div class="church-card">
+            <div class="church-image" style="background-image: url('images/vallarpadam-church.webp')"></div>
+            <div class="church-content">
+                <h2>Vallarpadam Church</h2>
+                <p>The Basilica of Our Lady of Ransom is a major pilgrimage center. Known for its beautiful location on Vallarpadam Island, this church is dedicated to Mary, known locally as Vallarpadathamma.</p>
+                <div class="church-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Timings: 6:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Feast: September 24</span>
+                    </div>
+                </div>
+                <div class="historical-note">
+                    <i class="fas fa-history"></i> Established in 1524
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
